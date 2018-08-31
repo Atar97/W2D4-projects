@@ -1,6 +1,3 @@
-require 'io/console'
-require 'benchmark'
-
 class Array
   
   def my_min_slow
@@ -53,18 +50,3 @@ class Array
   
 end 
  
- if __FILE__ == $PROGRAM_NAME
-   list = [5, 3, -9, 8, -7, 8]
-   p list.my_sub_sum_fast
-  end
- #  octopus = Big_O_ctopus.new()
- #     Benchmark.benchmark(Benchmark::CAPTION, 9, Benchmark::FORMAT,
- #                        "Avg. sluggish  : ", "Avg. dominant  : ", "Avg. clever    : ","Avg fast dance : ","Avg slow dance : ") do |b|
- #      s = b.report("Tot. sluggish  : ") { octopus.sluggish_octopus(fish) }
- #      d = b.report("Tot. dominant  : ") { octopus.dominant_octopus(fish) }
- #      c = b.report("Tot. clever    : ") { octopus.clever_octopus(fish) }
- #      f = b.report("Tot. fast_dance: ") { octopus.fast_dance("left-up") }
- #      sl = b.report("Tot. slow_dance: ") { octopus.slow_dance("left-up") }
- #      [s/fish.count, d/fish.count,c/fish.count,f/8,sl/8]
- #    end
- # end

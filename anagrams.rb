@@ -13,7 +13,23 @@ class String
     true
   end 
   
+  def third_anagram?(string)
+    self.chars.sort == string.chars.sort
+  end
   
+  def fourth_anagram?(str)
+    first = Hash.new(0)
+    second = Hash.new(0)
+    self.each_char { |chr|  first[chr] += 1}
+    str.each_char {|chr| second[chr] += 1}
+    first == second
+  end 
   
+  def bonus_anagram?(str)
+    counter = Hash.new(0)
+    self.each_char {|chr| counter[chr] += 1}
+    str.each_char {|chr| counter[chr] -= 1}
+    counter.all? {|_, v| v == 0}
+  end 
   
 end 
